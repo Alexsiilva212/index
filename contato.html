@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contato - Hospital São Lucas & Mende</title>
+    <title>Contato - Hospital São Lucas & Mendel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,8 +14,9 @@
             padding: 0;
             color: #333;
             background-image: url('fundo\ do\ site.jpg');
+            background-size: cover;
+            background-position: center;
         }
-
 
         h1 {
             margin: 0;
@@ -27,6 +28,7 @@
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         .contact-info {
@@ -68,7 +70,7 @@
         }
 
         .contact-form button:hover {
-            background-color: #0077b6;
+            background-color: #005fa3;
         }
 
         footer {
@@ -76,16 +78,93 @@
             background-color: #0077b6;
             color: #fff;
             padding: 10px;
-            position: absolute;
+            position: relative;
             width: 100%;
-            bottom: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%;
+                margin: 50px auto;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info div {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            .contact-form button {
+                font-size: 15px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            .contact-info div {
+                width: 100%;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
-
-
 
     <div class="container">
         <div class="contact-info">
@@ -120,6 +199,10 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Hospital São Lucas & Mendel. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 

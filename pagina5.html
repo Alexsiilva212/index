@@ -10,22 +10,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 200px;
+            height: auto;
+            margin: 0;
             background-color: #f0f2f5;
             font-family: Arial, sans-serif;
             flex-direction: column;
             background-image: url('fundo\ do\ site.jpg');
+            background-size: cover;
         }
 
         .form-container {
             background-color: #ffffff;
             padding: 20px;
-            margin: 200px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
         }
 
         .form-container h2 {
@@ -42,7 +43,7 @@
 
         .form-container input,
         .form-container select {
-            width: 95%;
+            width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -70,7 +71,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 800px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
         }
 
         .historico-consultas h3 {
@@ -97,9 +100,7 @@
 
         .consultas-lista button {
             margin-left: 10px;
-            display: flex;
             padding: 5px 20px;
-            margin-bottom: 5px;
             background-color: #ffc107;
             border: none;
             border-radius: 4px;
@@ -118,6 +119,34 @@
 
         .consultas-lista .btn-delete:hover {
             background-color: #c82333;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+
+            .form-container {
+                max-width: 100%;
+                margin: 10px;
+            }
+
+            .historico-consultas {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+            .consultas-lista li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .consultas-lista button {
+                margin-top: 5px;
+                width: 100%;
+            }
         }
     </style>
 </head>

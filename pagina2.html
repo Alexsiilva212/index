@@ -1,4 +1,3 @@
-<!--Cadastro de pacientes-->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,6 +16,9 @@
             font-family: Arial, sans-serif;
             flex-direction: column;
             background-image: url('fundo\ do\ site.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .form-container {
@@ -94,7 +96,6 @@
             padding: 5px 1px;
             border-radius: 4px;
             cursor: pointer;
-            
         }
 
         .pacientes-lista button:hover {
@@ -107,6 +108,55 @@
 
         .pacientes-lista .edit-button:hover {
             background-color: #218838;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                background-image: none;
+                background-color: #f0f2f5;
+            }
+
+            .form-container {
+                width: 90%; /* Ajusta a largura do formulário */
+            }
+
+            .pacientes-lista {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .pacientes-lista table {
+                font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+            }
+
+            .pacientes-lista th, .pacientes-lista td {
+                padding: 8px; /* Ajusta o preenchimento das células */
+            }
+
+            .form-container button {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .pacientes-lista table {
+                font-size: 12px;
+            }
+
+            .pacientes-lista th, .pacientes-lista td {
+                padding: 6px;
+            }
+
+            .form-container button {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -278,10 +328,11 @@
                 }
             }
         }
-        
+
         // Exibe a lista de pacientes ao carregar a página
         window.onload = exibirPacientes;
     </script>
 </body>
 
 </html>
+
